@@ -25,7 +25,7 @@
                 </ComboBox>-->
             </StackPanel>
 
-            <ListView Name="listTour" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="500">
+            <ListView Name="listTour" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="500" HorizontalContentAlignment="Stretch">
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
                         <WrapPanel HorizontalAlignment="Center"></WrapPanel>
@@ -34,11 +34,13 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Border Padding="5" CornerRadius="5" BorderThickness="1" BorderBrush="Aquamarine">
-                            <Grid Name="gridMain" Width="500" Height="500" Background="{Binding GenderColor}">
+                            <Grid Name="gridMain" Width="500" Height="500" Background="{Binding TourColor}">
                                 <StackPanel>
+                                    <Image Height="300" Width="200" Name="imUser" VerticalAlignment="Top" Source="\Resources\picture.png"/>
                                     <TextBlock Text="{Binding Name}"/>
                                     <TextBlock Text="{Binding TicketCount}"/>
                                     <TextBlock Text="{Binding Price}"/>
+                                    <TextBlock Uid="{Binding IsActual}" Name="tbAct" Loaded="tbAct_Loaded"></TextBlock>
                                     <!--<TextBlock Text="{Binding PassportTable.UniqueNumber, StringFormat=Паспорт: {0}}"></TextBlock>
                                     <TextBlock Text="{Binding Birthday, ConverterCulture=ru, StringFormat={}dd MMMM yyyy года}"/>
 

@@ -102,6 +102,7 @@
     <Compile Include="Pages\TourPage.xaml.cs">
       <DependentUpon>TourPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Property.cs" />
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -183,6 +184,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\логопр12.png" />
+    <Resource Include="Resources\picture.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -26,11 +26,9 @@ namespace WebApiDemoekz
             InitializeComponent();
             BaseClass.tBD = new Entities3();
             FrameClass.MainFrame = fMain;
-        }
-
-        private void btnAuto_Click(object sender, RoutedEventArgs e)
-        {
             FrameClass.MainFrame.Navigate(new Pages.TourPage());
         }
+
+        
     }
 }

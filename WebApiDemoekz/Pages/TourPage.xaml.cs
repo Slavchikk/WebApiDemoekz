@@ -26,5 +26,23 @@ namespace WebApiDemoekz.Pages
             listTour.ItemsSource = BaseClass.tBD.Tour.ToList();
 
         }
+
+        private void tbAct_Loaded(object sender, RoutedEventArgs e)
+        {
+            TextBlock tb = (TextBlock)sender;  // получаем доступ к TextBlock из шаблона
+            bool index = Convert.ToBoolean(tb.Uid);  // получаем числовой Uid элемента списка (в разметке предварительно нужно связать номер ячейки с номером кота в базе данных)
+
+            // ищем в таблице, где хранятится информация о кормах для кота, которые соответсвуют определенному коту
+           if(index == true)
+            {
+                tb.Text = "Актуален";
+            }
+            else
+            {
+                tb.Text = "Не актуален";
+            }
+           
+            
+        }
     }
 }
